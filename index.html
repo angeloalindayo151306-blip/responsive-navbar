@@ -2,33 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <title>Responsive Interactive Navbar - Lab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Right-Side Navbar with Active Color</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="logo">DragonZone</div>
+            <button
+                class="hamburger"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <nav class="navbar">
-        <div class="brand">MyBrand</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-page="Home">Home</a></li>
+                <li><a href="#about" data-page="About">About</a></li>
+                <li><a href="#services" data-page="Services">Services</a></li>
+                <li><a href="#contact" data-page="Contact">Contact</a></li>
+            </ul>
 
-        <!-- Hamburger Menu Button (for mobile) -->
-        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+            <button class="theme-toggle" type="button">Dark mode</button>
+        </nav>
+    </div>
 
-        <!-- Nav Links -->
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#" class="active-link">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Link external JS file -->
+    <div class="notification" id="notification"></div>
     <script src="script.js"></script>
 </body>
 </html>
